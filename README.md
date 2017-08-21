@@ -1,6 +1,8 @@
-# PsNgGs
+# Pluralsight Sample Project
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.0.
+
+The original project was made with Visual Studio Code but have moved to an Angular-CLI based project to be used to follow the exercise. This will provide me better structure in understanding Angular altogether. 
 
 ## Development server
 

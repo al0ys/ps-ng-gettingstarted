@@ -4,7 +4,6 @@ import { ProductService } from './product.service';
 
 
 @Component({
-  selector: 'app-product',
   moduleId: module.id,
   templateUrl: 'product-list.component.html',
   styleUrls: ['product-list.component.css']
@@ -14,8 +13,8 @@ export class ProductListComponent  implements OnInit  {
   pageTitle = 'Product List';
   imageWidth = 50;
   imageMargin = 2;
-  listFilter = 'Leaf';
-  showImage = false;
+  listFilter = '';
+  showImage = true;
   products: IProduct[] = [];
   errorMessage: string;
 
