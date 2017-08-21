@@ -9,6 +9,7 @@ import { ProductFilterPipe } from './product/product-filter.pipe';
 import { StarComponent } from './shared/star.component';
 import { ProductDetailComponent } from './product/product-detail.component';
 import { WelcomeComponent } from './home/welcome.component';
+import { ProductGuardService } from './product/product-guard.service';
 
 
 
@@ -19,7 +20,7 @@ import { WelcomeComponent } from './home/welcome.component';
     FormsModule,
     RouterModule.forRoot([
       {path: 'products', component: ProductListComponent},
-      {path: 'products/:id', component: ProductDetailComponent},
+      {path: 'products/:id', canActivate: [ ProductGuardService ], component: ProductDetailComponent},
       {path: 'welcome', component: WelcomeComponent},
       {path: '', redirectTo: 'welcome', pathMatch: 'full'},
       {path: '**', redirectTo: 'welcome', pathMatch: 'full'},
@@ -33,7 +34,7 @@ import { WelcomeComponent } from './home/welcome.component';
     ProductDetailComponent,
     WelcomeComponent
   ],
-  providers: [],
+  providers: [ProductGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
